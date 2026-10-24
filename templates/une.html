@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Le Journal du matin — {{DATE}}</title>
+<!--
+  GABARIT « une » A4. Remplacer chaque {{...}} ; ne rien ajouter d'autre à la structure.
+  - {{DATE}}      : date longue en français, ex. « samedi 24 octobre 2026 »
+  - {{EDITION}}   : ex. « N° 297 · 6 h 00 · 13 sources, 34 éléments, 8 histoires »
+  - {{PRINCIPALE}}: UN bloc <article class="lead"> (voir modèle ci-dessous)
+  - {{COL1}} {{COL2}} {{COL3}} : 2 à 3 blocs <article class="story"> par colonne
+  Modèle principale :
+    <article class="lead">
+      <div class="photo"><img src="URL_IMAGE" alt=""></div>        (supprimer ce div si pas d'image)
+      <div class="txt"><p class="src">SOURCE</p><h2>TITRE</h2><p>50 mots maximum.</p>
+      <p class="lien"><a href="URL_COMPLETE">domaine.com/…/fin-du-lien</a></p></div>
+    </article>
+  Modèle secondaire :
+    <article class="story"><p class="src">SOURCE</p><h3>TITRE</h3><p>35 mots maximum.</p>
+    <p class="lien"><a href="URL_COMPLETE">domaine.com/…/fin-du-lien</a></p></article>
+-->
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 210mm; height: 297mm; background: #fbf8f1; }
+  body { font-family: Georgia, "Times New Roman", serif; color: #1a1a1a; padding: 10mm 12mm 8mm; display: flex; flex-direction: column; overflow: hidden; }
+  header { text-align: center; border-top: 1.2mm solid #1a1a1a; border-bottom: 0.4mm solid #1a1a1a; padding: 2mm 0 1.5mm; }
+  header h1 { font-size: 40pt; font-weight: 700; letter-spacing: 0.5mm; line-height: 1.05; font-variant: small-caps; }
+  .bandeau { display: flex; justify-content: space-between; font: 8.5pt/1.2 Helvetica, Arial, sans-serif; text-transform: uppercase; letter-spacing: 0.3mm; border-top: 0.3mm solid #1a1a1a; margin-top: 1.5mm; padding-top: 1.2mm; }
+  .lead { display: flex; gap: 6mm; padding: 4mm 0; border-bottom: 0.4mm solid #1a1a1a; height: 92mm; overflow: hidden; }
+  .lead .photo { flex: 0 0 86mm; height: 100%; background: #ddd; }
+  .lead .photo img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(0.15); }
+  .lead .txt { flex: 1; min-width: 0; }
+  .lead h2 { font-size: 21pt; line-height: 1.08; margin: 1mm 0 2.5mm; }
+  .lead p { font-size: 10pt; line-height: 1.36; }
+  .cols { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; min-height: 0; padding-top: 3mm; overflow: hidden; }
+  .col { padding: 0 4mm; border-left: 0.3mm solid #1a1a1a; min-width: 0; display: flex; flex-direction: column; gap: 4.5mm; }
+  .col:first-child { border-left: 0; padding-left: 0; }
+  .col:last-child { padding-right: 0; }
+  .story { padding-bottom: 3.5mm; border-bottom: 0.25mm solid #999; }
+  .col .story:last-child { border-bottom: 0; }
+  .story h3 { font-size: 13.5pt; line-height: 1.12; margin: 0.8mm 0 1.8mm; }
+  .story p { font-size: 9.5pt; line-height: 1.36; hyphens: auto; }
+  .src { font: 700 7.5pt/1.1 Helvetica, Arial, sans-serif; text-transform: uppercase; letter-spacing: 0.35mm; color: #a4351b; }
+  p.lien { margin-top: 1.6mm; font: 7.5pt/1.2 Helvetica, Arial, sans-serif; word-break: break-all; }
+  p.lien a { color: #1a4a8a; text-decoration: none; border-bottom: 0.2mm solid #1a4a8a; }
+  footer { border-top: 0.4mm solid #1a1a1a; padding-top: 1.5mm; font: 7pt/1.2 Helvetica, Arial, sans-serif; color: #555; text-align: center; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Le Journal du matin</h1>
+  <div class="bandeau"><span>{{DATE}}</span><span>{{EDITION}}</span><span>Une page · environ 4 minutes</span></div>
+</header>
+{{PRINCIPALE}}
+<main class="cols">
+  <div class="col">{{COL1}}</div>
+  <div class="col">{{COL2}}</div>
+  <div class="col">{{COL3}}</div>
+</main>
+<footer>Imprimé pour vous pendant que vous dormiez · fait avec Claude · claude-journal-du-matin</footer>
+</body>
+</html>

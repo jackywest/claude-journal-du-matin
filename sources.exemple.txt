@@ -1,0 +1,14 @@
+# Mes sources (une par ligne). Nom | URL
+Claude Code (releases) | https://github.com/anthropics/claude-code/releases.atom
+Anthropic SDK Python (releases) | https://github.com/anthropics/anthropic-sdk-python/releases.atom
+Ollama (releases) | https://github.com/ollama/ollama/releases.atom
+llama.cpp (releases) | https://github.com/ggml-org/llama.cpp/releases.atom
+Hacker News (best) | https://hnrss.org/best
+Simon Willison | https://simonwillison.net/atom/everything/
+The Verge IA | https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+Ars Technica | https://feeds.arstechnica.com/arstechnica/index
+Hugging Face blog | https://huggingface.co/blog/feed.xml
+Google AI blog | https://blog.google/technology/ai/rss/
+OpenAI news | https://openai.com/news/rss.xml
+Fireship (YouTube) | https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA
+Anthropic (YouTube) | https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA
