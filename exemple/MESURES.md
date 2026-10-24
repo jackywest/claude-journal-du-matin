@@ -10,7 +10,7 @@ Les chiffres ci-dessous viennent d'une vraie exécution, pas d'une estimation.
 - Aucun doublon réel ce jour-là. Le dédoublonnage a donc été vérifié à part sur 4 éléments fabriqués (même histoire sous deux titres + même URL avec `utm_`) : 4 -> 2 groupes, l'un avec 2 doublons rattachés.
 
 ## Choix (fait à la main, comme le skill le demande)
-34 éléments -> **8 histoires** : 1 principale + 7 en colonnes (2 / 2 / 3). Écartés : 12 builds automatiques d'un dépôt de modèles, 4 versions mineures d'outils, 1 version de SDK, plusieurs fils sans nouveauté.
+34 éléments -> **8 histoires** : 1 principale + 7 en colonnes (2 / 2 / 3). Écartés (26) : 10 builds automatiques d'un dépôt de modèles, 3 versions d'un outil local, 1 version de SDK, et 12 articles ou fils sans nouveauté assez forte ou trop pointus.
 
 ## PDF (`scripts/render.sh`)
 - **1 page** A4 (594,96 x 841,92 pt), vérifiée avec `pdfinfo`, puis image extraite avec `pdftoppm` et relue en entier.
